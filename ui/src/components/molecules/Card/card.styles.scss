@@ -1,0 +1,38 @@
+.tooliv-card {
+  border-radius: 0.5rem;
+  border: 1px solid var(--tooliv-border-primary);
+  background-color: var(--tooliv-background-primary);
+  box-shadow: 0 1px 3px 0 var(--tooliv-shadow-light), 0 1px 2px 0 var(--tooliv-shadow-light);
+  overflow: hidden;
+}
+
+.tooliv-card__header {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--tooliv-border-primary);
+  background-color: var(--tooliv-background-secondary);
+}
+
+.tooliv-card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--tooliv-text-primary);
+  margin: 0;
+}
+
+.tooliv-card__content {
+  padding: 1.5rem;
+  color: var(--tooliv-text-primary);
+}
+
+.tooliv-card__footer {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  padding-top: 0;
+  border-top: 1px solid var(--tooliv-border-primary);
+  background-color: var(--tooliv-background-secondary);
+}

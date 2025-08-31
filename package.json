@@ -1,0 +1,18 @@
+{
+  "name": "tooliv",
+  "version": "1.0.0",
+  "description": "Tooliv monorepo with React client and UI component library",
+  "private": true,
+  "packageManager": "pnpm@10.14.0",
+  "scripts": {
+    "dev": "pnpm --filter client dev",
+    "build": "pnpm --filter client build",
+    "build:ui": "pnpm --filter ui build",
+    "test": "pnpm --filter client test",
+    "lint": "pnpm --filter client lint",
+    "clean": "pnpm --filter client clean && pnpm --filter ui clean"
+  },
+  "keywords": ["monorepo", "react", "ui-components", "vite"],
+  "author": "",
+  "license": "ISC"
+}

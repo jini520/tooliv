@@ -1,0 +1,133 @@
+/* 글로벌 리셋 및 기본 스타일 */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 스토리북 컨테이너 스타일 */
+.sb-show-main {
+  background: transparent !important;
+}
+
+/* 테마 클래스 - TypeScript colors.ts와 일치 */
+.light {
+  --tooliv-primary: #FF9E89;
+  --tooliv-secondary: #FF7585;
+  --tooliv-third: #FFD089;
+  --tooliv-background-primary: #FFFFFF;
+  --tooliv-background-secondary: #F8F9FA;
+  --tooliv-background-tertiary: #F1F3F4;
+  --tooliv-text-primary: #1A1A1A;
+  --tooliv-text-secondary: #4A4A4A;
+  --tooliv-text-tertiary: #6B7280;
+  --tooliv-text-disabled: #9CA3AF;
+  --tooliv-text-inverse: #FFFFFF;
+  --tooliv-border-primary: #E5E7EB;
+  --tooliv-border-secondary: #D1D5DB;
+  --tooliv-border-tertiary: #9CA3AF;
+  --tooliv-border-focus: #FF9E89;
+  --tooliv-status-success: #10B981;
+  --tooliv-status-warning: #F59E0B;
+  --tooliv-status-error: #EF4444;
+  --tooliv-status-info: #3B82F6;
+  --tooliv-shadow-light: rgba(0, 0, 0, 0.05);
+  --tooliv-shadow-medium: rgba(0, 0, 0, 0.1);
+  --tooliv-shadow-heavy: rgba(0, 0, 0, 0.15);
+  --tooliv-overlay-light: rgba(0, 0, 0, 0.1);
+  --tooliv-overlay-medium: rgba(0, 0, 0, 0.3);
+  --tooliv-overlay-heavy: rgba(0, 0, 0, 0.6);
+}
+
+.dark {
+  --tooliv-primary: #FFB3A3;
+  --tooliv-secondary: #FF8A9A;
+  --tooliv-third: #FFDDA3;
+  --tooliv-background-primary: #0F0F0F;
+  --tooliv-background-secondary: #1A1A1A;
+  --tooliv-background-tertiary: #2A2A2A;
+  --tooliv-text-primary: #FFFFFF;
+  --tooliv-text-secondary: #E5E7EB;
+  --tooliv-text-tertiary: #D1D5DB;
+  --tooliv-text-disabled: #6B7280;
+  --tooliv-text-inverse: #1A1A1A;
+  --tooliv-border-primary: #374151;
+  --tooliv-border-secondary: #4B5563;
+  --tooliv-border-tertiary: #6B7280;
+  --tooliv-border-focus: #FFB3A3;
+  --tooliv-status-success: #34D399;
+  --tooliv-status-warning: #FBBF24;
+  --tooliv-status-error: #F87171;
+  --tooliv-status-info: #60A5FA;
+  --tooliv-shadow-light: rgba(0, 0, 0, 0.3);
+  --tooliv-shadow-medium: rgba(0, 0, 0, 0.5);
+  --tooliv-shadow-heavy: rgba(0, 0, 0, 0.7);
+  --tooliv-overlay-light: rgba(0, 0, 0, 0.4);
+  --tooliv-overlay-medium: rgba(0, 0, 0, 0.6);
+  --tooliv-overlay-heavy: rgba(0, 0, 0, 0.8);
+}
+
+/* 기본 배경색 적용 */
+body {
+  background-color: var(--tooliv-background-primary);
+  color: var(--tooliv-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 스토리북 스토리 컨테이너 */
+.sb-story {
+  padding: 1rem;
+  background-color: var(--tooliv-background-primary);
+  border: 1px solid var(--tooliv-border-primary);
+  border-radius: 0.375rem;
+  margin: 1rem 0;
+}
+
+/* 코드 블록 스타일 */
+.sb-story pre {
+  background-color: var(--tooliv-background-secondary);
+  border: 1px solid var(--tooliv-border-primary);
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  overflow-x: auto;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* 링크 스타일 */
+.sb-story a {
+  color: var(--tooliv-status-info);
+  text-decoration: none;
+}
+
+.sb-story a:hover {
+  text-decoration: underline;
+}
+
+/* 테이블 스타일 */
+.sb-story table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.sb-story th,
+.sb-story td {
+  border: 1px solid var(--tooliv-border-primary);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.sb-story th {
+  background-color: var(--tooliv-background-secondary);
+  font-weight: 600;
+}

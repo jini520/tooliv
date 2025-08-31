@@ -1,0 +1,70 @@
+.tooliv-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  
+  &:focus-visible {
+    outline: 2px solid var(--tooliv-border-focus);
+    outline-offset: 2px;
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  // Variants
+  &--primary {
+    background-color: var(--tooliv-primary);
+    color: var(--tooliv-text-inverse);
+    
+    &:hover:not(:disabled) {
+      background-color: var(--tooliv-secondary);
+    }
+  }
+  
+  &--secondary {
+    background-color: var(--tooliv-background-tertiary);
+    color: var(--tooliv-text-primary);
+    border: 1px solid var(--tooliv-border-primary);
+    
+    &:hover:not(:disabled) {
+      background-color: var(--tooliv-background-secondary);
+    }
+  }
+  
+  &--outline {
+    background-color: transparent;
+    color: var(--tooliv-text-primary);
+    border: 1px solid var(--tooliv-border-primary);
+    
+    &:hover:not(:disabled) {
+      background-color: var(--tooliv-background-secondary);
+    }
+  }
+  
+  // Sizes
+  &--sm {
+    height: 2rem;
+    padding: 0 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  &--md {
+    height: 2.5rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  &--lg {
+    height: 3rem;
+    padding: 0 1.5rem;
+    font-size: 1.125rem;
+  }
+}
