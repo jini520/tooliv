@@ -1,0 +1,38 @@
+# 소스 코드 (빌드된 dist만 사용)
+src/
+
+# 테스트 관련
+__tests__/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+coverage/
+jest.config.js
+
+# 스토리북 관련
+.storybook/
+*.stories.ts
+*.stories.tsx
+stories/
+
+# 목업 파일
+__mocks__/
+
+# 개발 도구
+.vscode/
+.idea/
+*.log
+.DS_Store
+
+# 의존성
+node_modules/
+
+# 빌드 도구
+vite.config.js
+tsconfig.json
+*.config.js
+
+# 문서
+THEME.md
+README.md

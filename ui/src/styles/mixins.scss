@@ -1,0 +1,46 @@
+// 테마 맵을 CSS 변수로 변환하는 믹스인
+@mixin spread-map($map: ()) {
+  @each $key, $value in $map {
+    #{$key}: $value;
+  }
+}
+
+// 테마 색상 가져오기 함수
+@function theme-color($color-name) {
+  @return var(#{$--theme-color-#{$color-name}});
+}
+
+// 스페이싱 가져오기 함수
+@function theme-spacing($size) {
+  @return var(--theme-spacing-#{$size});
+}
+
+// 테두리 반경 가져오기 함수
+@function theme-border-radius($size) {
+  @return var(--theme-border-radius-#{$size});
+}
+
+// 폰트 크기 가져오기 함수
+@function theme-font-size($size) {
+  @return var(--theme-font-size-#{$size});
+}
+
+// 폰트 굵기 가져오기 함수
+@function theme-font-weight($weight) {
+  @return var(--theme-font-weight-#{$weight});
+}
+
+// 그림자 가져오기 함수
+@function theme-shadow($size) {
+  @return var(--theme-shadow-#{$size});
+}
+
+// 전환 효과 가져오기 함수
+@function theme-transition($speed) {
+  @return var(--theme-transition-#{$speed});
+}
+
+// Z-인덱스 가져오기 함수
+@function theme-z-index($element) {
+  @return var(--theme-z-#{$element});
+}

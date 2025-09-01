@@ -1,11 +1,31 @@
-// 색상 시스템
-export * from './colors';
+// ThemeProvider와 useTheme hook만 export
+export { ThemeProvider, useTheme } from './ThemeContext';
 
-// 테마 정의
-export * from './theme';
+// 테마 관련 유틸리티 함수들
+export const applyThemeClass = (theme: 'light' | 'dark') => {
+  if (typeof document !== 'undefined') {
+    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.add(theme);
+  }
+};
 
-// 테마 컨텍스트 및 훅
-export * from './ThemeContext';
+export const getSystemTheme = (): 'light' | 'dark' => {
+  if (typeof window !== 'undefined') {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  return 'light';
+};
 
-// 테마 유틸리티
-export * from './utils';
+export const getStoredTheme = (): 'light' | 'dark' | null => {
+  if (typeof window !== 'undefined') {
+    const theme = localStorage.getItem('tooliv-theme');
+    return theme === 'light' || theme === 'dark' ? theme : null;
+  }
+  return null;
+};
+
+export const storeTheme = (theme: 'light' | 'dark') => {
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('tooliv-theme', theme);
+  }
+};

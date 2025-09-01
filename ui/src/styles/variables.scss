@@ -1,0 +1,258 @@
+// CSS 변수 이름 정의  
+$--theme-color-primary: --theme-color-primary;
+
+// 자주 사용하는 CSS 변수들
+$--spacing-xs: --spacing-xs;
+$--spacing-sm: --spacing-sm;
+$--spacing-md: --spacing-md;
+$--spacing-lg: --spacing-lg;
+$--spacing-xl: --spacing-xl;
+$--spacing-xxl: --spacing-xxl;
+
+$--border-radius-sm: --border-radius-sm;
+$--border-radius-md: --border-radius-md;
+$--border-radius-lg: --border-radius-lg;
+$--border-radius-xl: --border-radius-xl;
+
+$--font-size-xs: --font-size-xs;
+$--font-size-sm: --font-size-sm;
+$--font-size-base: --font-size-base;
+$--font-size-lg: --font-size-lg;
+$--font-size-xl: --font-size-xl;
+
+$--font-weight-normal: --font-weight-normal;
+$--font-weight-medium: --font-weight-medium;
+$--font-weight-semibold: --font-weight-semibold;
+$--font-weight-bold: --font-weight-bold;
+
+$--transition-fast: --transition-fast;
+$--transition-normal: --transition-normal;
+$--transition-slow: --transition-slow;
+$--theme-color-secondary: --theme-color-secondary;
+$--theme-color-third: --theme-color-third;
+
+$--theme-color-background-primary: --theme-color-background-primary;
+$--theme-color-background-secondary: --theme-color-background-secondary;
+$--theme-color-background-tertiary: --theme-color-background-tertiary;
+
+$--theme-color-text-primary: --theme-color-text-primary;
+$--theme-color-text-secondary: --theme-color-text-secondary;
+$--theme-color-text-tertiary: --theme-color-text-tertiary;
+$--theme-color-text-disabled: --theme-color-text-disabled;
+$--theme-color-text-inverse: --theme-color-text-inverse;
+
+$--theme-color-border-primary: --theme-color-border-primary;
+$--theme-color-border-secondary: --theme-color-border-secondary;
+$--theme-color-border-tertiary: --theme-color-border-tertiary;
+$--theme-color-border-focus: --theme-color-border-focus;
+
+$--theme-color-status-success: --theme-color-status-success;
+$--theme-color-status-warning: --theme-color-status-warning;
+$--theme-color-status-error: --theme-color-status-error;
+$--theme-color-status-info: --theme-color-status-info;
+
+$--theme-color-shadow-light: --theme-color-shadow-light;
+$--theme-color-shadow-medium: --theme-color-shadow-medium;
+$--theme-color-shadow-heavy: --theme-color-shadow-heavy;
+
+$--theme-color-overlay-light: --theme-color-overlay-light;
+$--theme-color-overlay-medium: --theme-color-overlay-medium;
+$--theme-color-overlay-heavy: --theme-color-overlay-heavy;
+
+// 스페이싱
+$spacing-xs: 0.25rem;    // 4px
+$spacing-sm: 0.5rem;     // 8px
+$spacing-md: 1rem;       // 16px
+$spacing-lg: 1.5rem;     // 24px
+$spacing-xl: 2rem;       // 32px
+$spacing-xxl: 3rem;      // 48px
+
+// 테두리 반경
+$border-radius-sm: 0.25rem;    // 4px
+$border-radius-md: 0.375rem;   // 6px
+$border-radius-lg: 0.5rem;     // 8px
+$border-radius-xl: 0.75rem;    // 12px
+$border-radius-full: 9999px;   // 원형
+
+// 타이포그래피
+$font-family-sans: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+$font-family-mono: 'ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace';
+
+$font-size-xs: 0.75rem;      // 12px
+$font-size-sm: 0.875rem;     // 14px
+$font-size-base: 1rem;       // 16px
+$font-size-lg: 1.125rem;     // 18px
+$font-size-xl: 1.25rem;      // 20px
+$font-size-2xl: 1.5rem;      // 24px
+$font-size-3xl: 1.875rem;    // 30px
+$font-size-4xl: 2.25rem;     // 36px
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// 그림자
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+// 다크 모드 그림자
+$dark-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+$dark-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+$dark-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+$dark-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+$dark-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+
+// 전환 효과
+$transition-fast: 150ms ease-in-out;
+$transition-normal: 250ms ease-in-out;
+$transition-slow: 350ms ease-in-out;
+
+// Z-인덱스
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal: 1040;
+$z-popover: 1050;
+$z-tooltip: 1060;
+
+// 라이트 테마 색상 맵
+$theme-map-light: (
+  #{$--theme-color-primary}: #FF9E89,
+  
+  // 스페이싱 CSS 변수
+  #{$--spacing-xs}: #{$spacing-xs},
+  #{$--spacing-sm}: #{$spacing-sm},
+  #{$--spacing-md}: #{$spacing-md},
+  #{$--spacing-lg}: #{$spacing-lg},
+  #{$--spacing-xl}: #{$spacing-xl},
+  #{$--spacing-xxl}: #{$spacing-xxl},
+  
+  // 테두리 반경 CSS 변수
+  #{$--border-radius-sm}: #{$border-radius-sm},
+  #{$--border-radius-md}: #{$border-radius-md},
+  #{$--border-radius-lg}: #{$border-radius-lg},
+  #{$--border-radius-xl}: #{$border-radius-xl},
+  
+  // 폰트 크기 CSS 변수
+  #{$--font-size-xs}: #{$font-size-xs},
+  #{$--font-size-sm}: #{$font-size-sm},
+  #{$--font-size-base}: #{$font-size-base},
+  #{$--font-size-lg}: #{$font-size-lg},
+  #{$--font-size-xl}: #{$font-size-xl},
+  
+  // 폰트 굵기 CSS 변수
+  #{$--font-weight-normal}: #{$font-weight-normal},
+  #{$--font-weight-medium}: #{$font-weight-medium},
+  #{$--font-weight-semibold}: #{$font-weight-semibold},
+  #{$--font-weight-bold}: #{$font-weight-bold},
+  
+  // 전환 효과 CSS 변수
+  #{$--transition-fast}: #{$transition-fast},
+  #{$--transition-normal}: #{$transition-normal},
+  #{$--transition-slow}: #{$transition-slow},
+  #{$--theme-color-secondary}: #FF7585,
+  #{$--theme-color-third}: #FFD089,
+  
+  #{$--theme-color-background-primary}: #FFFFFF,
+  #{$--theme-color-background-secondary}: #F8F9FA,
+  #{$--theme-color-background-tertiary}: #F1F3F4,
+  
+  #{$--theme-color-text-primary}: #1A1A1A,
+  #{$--theme-color-text-secondary}: #4A4A4A,
+  #{$--theme-color-text-tertiary}: #6B7280,
+  #{$--theme-color-text-disabled}: #9CA3AF,
+  #{$--theme-color-text-inverse}: #FFFFFF,
+  
+  #{$--theme-color-border-primary}: #E5E7EB,
+  #{$--theme-color-border-secondary}: #D1D5DB,
+  #{$--theme-color-border-tertiary}: #9CA3AF,
+  #{$--theme-color-border-focus}: #FF9E89,
+  
+  #{$--theme-color-status-success}: #10B981,
+  #{$--theme-color-status-warning}: #F59E0B,
+  #{$--theme-color-status-error}: #EF4444,
+  #{$--theme-color-status-info}: #3B82F6,
+  
+  #{$--theme-color-shadow-light}: rgba(0, 0, 0, 0.05),
+  #{$--theme-color-shadow-medium}: rgba(0, 0, 0, 0.1),
+  #{$--theme-color-shadow-heavy}: rgba(0, 0, 0, 0.15),
+  
+  #{$--theme-color-overlay-light}: rgba(0, 0, 0, 0.1),
+  #{$--theme-color-overlay-medium}: rgba(0, 0, 0, 0.3),
+  #{$--theme-color-overlay-heavy}: rgba(0, 0, 0, 0.6),
+);
+
+// 다크 테마 색상 맵
+$theme-map-dark: (
+  #{$--theme-color-primary}: #FFB3A3,
+  
+  // 스페이싱 CSS 변수 (다크/라이트 동일)
+  #{$--spacing-xs}: #{$spacing-xs},
+  #{$--spacing-sm}: #{$spacing-sm},
+  #{$--spacing-md}: #{$spacing-md},
+  #{$--spacing-lg}: #{$spacing-lg},
+  #{$--spacing-xl}: #{$spacing-xl},
+  #{$--spacing-xxl}: #{$spacing-xxl},
+  
+  // 테두리 반경 CSS 변수 (다크/라이트 동일)
+  #{$--border-radius-sm}: #{$border-radius-sm},
+  #{$--border-radius-md}: #{$border-radius-md},
+  #{$--border-radius-lg}: #{$border-radius-lg},
+  #{$--border-radius-xl}: #{$border-radius-xl},
+  
+  // 폰트 크기 CSS 변수 (다크/라이트 동일)
+  #{$--font-size-xs}: #{$font-size-xs},
+  #{$--font-size-sm}: #{$font-size-sm},
+  #{$--font-size-base}: #{$font-size-base},
+  #{$--font-size-lg}: #{$font-size-lg},
+  #{$--font-size-xl}: #{$font-size-xl},
+  
+  // 폰트 굵기 CSS 변수 (다크/라이트 동일)
+  #{$--font-weight-normal}: #{$font-weight-normal},
+  #{$--font-weight-medium}: #{$font-weight-medium},
+  #{$--font-weight-semibold}: #{$font-weight-semibold},
+  #{$--font-weight-bold}: #{$font-weight-bold},
+  
+  // 전환 효과 CSS 변수 (다크/라이트 동일)
+  #{$--transition-fast}: #{$transition-fast},
+  #{$--transition-normal}: #{$transition-normal},
+  #{$--transition-slow}: #{$transition-slow},
+  #{$--theme-color-secondary}: #FF8A9A,
+  #{$--theme-color-third}: #FFDDA3,
+  
+  #{$--theme-color-background-primary}: #0F0F0F,
+  #{$--theme-color-background-secondary}: #1A1A1A,
+  #{$--theme-color-background-tertiary}: #2A2A2A,
+  
+  #{$--theme-color-text-primary}: #FFFFFF,
+  #{$--theme-color-text-secondary}: #E5E7EB,
+  #{$--theme-color-text-tertiary}: #D1D5DB,
+  #{$--theme-color-text-disabled}: #6B7280,
+  #{$--theme-color-text-inverse}: #1A1A1A,
+  
+  #{$--theme-color-border-primary}: #374151,
+  #{$--theme-color-border-secondary}: #4B5563,
+  #{$--theme-color-border-tertiary}: #6B7280,
+  #{$--theme-color-border-focus}: #FFB3A3,
+  
+  #{$--theme-color-status-success}: #34D399,
+  #{$--theme-color-status-warning}: #FBBF24,
+  #{$--theme-color-status-error}: #F87171,
+  #{$--theme-color-status-info}: #60A5FA,
+  
+  #{$--theme-color-shadow-light}: rgba(0, 0, 0, 0.3),
+  #{$--theme-color-shadow-medium}: rgba(0, 0, 0, 0.5),
+  #{$--theme-color-shadow-heavy}: rgba(0, 0, 0, 0.7),
+  
+  #{$--theme-color-overlay-light}: rgba(0, 0, 0, 0.4),
+  #{$--theme-color-overlay-medium}: rgba(0, 0, 0, 0.6),
+  #{$--theme-color-overlay-heavy}: rgba(0, 0, 0, 0.8),
+);

@@ -1,0 +1,11 @@
+// 전역 스타일 - CSS 변수만 사용
+@use './variables.scss' as vars;
+@use './mixins.scss' as mixins;
+
+:root.light {
+  @include mixins.spread-map(vars.$theme-map-light);
+}
+
+:root.dark {
+  @include mixins.spread-map(vars.$theme-map-dark);
+}

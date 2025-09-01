@@ -1,0 +1,11 @@
+// 전역 변수와 mixin을 정의하는 파일
+// 이 파일을 import하면 모든 변수와 mixin을 네임스페이스 없이 사용할 수 있습니다
+
+// variables.scss의 모든 변수를 전역으로 가져오기
+@forward './variables.scss';
+
+// mixins.scss의 모든 mixin을 전역으로 가져오기  
+@forward './mixins.scss';
+
+// theme.scss의 모든 내용을 전역으로 가져오기
+@forward './theme.scss';

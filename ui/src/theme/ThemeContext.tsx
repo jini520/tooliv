@@ -5,11 +5,12 @@ import React, {
   useEffect,
   ReactNode,
 } from "react";
-import { Theme, ThemeMode, themes } from "./theme";
+
+// 테마 모드 타입
+export type ThemeMode = "light" | "dark";
 
 // 테마 컨텍스트 타입
 interface ThemeContextType {
-  theme: Theme;
   mode: ThemeMode;
   toggleTheme: () => void;
   setTheme: (mode: ThemeMode) => void;
@@ -30,12 +31,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   defaultMode = "light",
 }) => {
   const [mode, setMode] = useState<ThemeMode>(defaultMode);
-  const [theme, setThemeState] = useState<Theme>(themes[defaultMode]);
 
   // 테마 변경 함수
   const setTheme = (newMode: ThemeMode) => {
     setMode(newMode);
-    setThemeState(themes[newMode]);
 
     // 로컬 스토리지에 저장
     if (typeof window !== "undefined") {
@@ -44,6 +43,28 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       // HTML에 테마 클래스 추가/제거
       document.documentElement.classList.remove("light", "dark");
       document.documentElement.classList.add(newMode);
+
+      // HTML에 직접 테마 스타일 적용
+      const root = document.documentElement;
+      const body = document.body;
+
+      if (newMode === "dark") {
+        // 배경색 설정
+        root.style.backgroundColor = "var(--theme-color-background-primary)";
+        body.style.backgroundColor = "var(--theme-color-background-primary)";
+
+        // 텍스트 색상 설정
+        root.style.color = "var(--theme-color-text-primary)";
+        body.style.color = "var(--theme-color-text-primary)";
+      } else {
+        // 배경색 설정
+        root.style.backgroundColor = "var(--theme-color-background-primary)";
+        body.style.backgroundColor = "var(--theme-color-background-primary)";
+
+        // 텍스트 색상 설정
+        root.style.color = "var(--theme-color-text-primary)";
+        body.style.color = "var(--theme-color-text-primary)";
+      }
     }
   };
 
@@ -57,7 +78,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   useEffect(() => {
     if (typeof window !== "undefined") {
       const savedTheme = localStorage.getItem("tooliv-theme") as ThemeMode;
-      if (savedTheme && themes[savedTheme]) {
+      if (savedTheme && (savedTheme === "light" || savedTheme === "dark")) {
         setTheme(savedTheme);
       } else {
         // 시스템 테마 감지
@@ -88,7 +109,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   }, []);
 
   const value: ThemeContextType = {
-    theme,
     mode,
     toggleTheme,
     setTheme,
@@ -99,23 +119,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   );
 };
 
-// 테마 훅
+// useTheme 훅
 export const useTheme = (): ThemeContextType => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
-};
-
-// 테마 모드만 사용하는 훅
-export const useThemeMode = (): ThemeMode => {
-  const { mode } = useTheme();
-  return mode;
-};
-
-// 테마 색상만 사용하는 훅
-export const useThemeColors = () => {
-  const { theme } = useTheme();
-  return theme.colors;
 };

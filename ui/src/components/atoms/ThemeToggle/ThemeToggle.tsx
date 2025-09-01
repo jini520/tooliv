@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useTheme } from "../../../theme/ThemeContext";
 import "./theme-toggle.styles.scss";
 
 export interface ThemeToggleProps {
@@ -12,19 +13,8 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({
   showLabel = false,
   size = "md",
 }) => {
-  // 로컬 상태로 테마 모드 관리 (스토리북에서 사용)
-  const [isDark, setIsDark] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-
-    // 실제 테마 시스템이 있을 때만 적용
-    if (typeof window !== "undefined") {
-      const newMode = isDark ? "light" : "dark";
-      document.documentElement.classList.remove("light", "dark");
-      document.documentElement.classList.add(newMode);
-    }
-  };
+  const { mode, toggleTheme } = useTheme();
+  const isDark = mode === "dark";
 
   const buttonClasses =
     `tooliv-theme-toggle tooliv-theme-toggle--${size} ${className}`.trim();
