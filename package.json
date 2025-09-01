@@ -10,7 +10,9 @@
     "build:ui": "pnpm --filter ui build",
     "test": "pnpm --filter client test",
     "lint": "pnpm --filter client lint",
-    "clean": "pnpm --filter client clean && pnpm --filter ui clean"
+    "clean": "pnpm --filter client clean && pnpm --filter ui clean",
+    "storybook": "pnpm --filter @tooliv/ui storybook",
+    "build-storybook": "pnpm --filter @tooliv/ui build-storybook"
   },
   "keywords": ["monorepo", "react", "ui-components", "vite"],
   "author": "",
