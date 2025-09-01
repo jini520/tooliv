@@ -8,7 +8,10 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "msw:init": "msw init public/ --save",
+    "msw:generate": "msw init public/ --save",
+    "msw:start": "echo 'MSW는 개발 환경에서만 자동으로 시작됩니다.'"
   },
   "dependencies": {
     "@tooliv/ui": "workspace:*",
@@ -25,6 +28,12 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "msw": "^2.11.1",
     "vite": "^7.1.2"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
