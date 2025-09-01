@@ -53,3 +53,26 @@ pnpm build:ui
 - **UI Library**: React 19, Vite, TypeScript, vite-plugin-dts
 - **Package Manager**: pnpm
 - **Build Tool**: Vite
+
+## 개발 가이드
+
+### 커밋 메시지 규칙
+
+프로젝트의 커밋 메시지는 [커밋 규칙](COMMIT_CONVENTION.md)을 따릅니다.
+
+### Pull Request
+
+PR을 생성할 때는 자동으로 생성되는 [PR 템플릿](.github/pull_request_template.md)을 사용해주세요.
+
+### 이슈 생성
+
+- 🐛 **버그 리포트**: [버그 리포트 템플릿](.github/ISSUE_TEMPLATE/bug_report.md) 사용
+- ✨ **기능 요청**: [기능 요청 템플릿](.github/ISSUE_TEMPLATE/feature_request.md) 사용
+
+## 프로젝트 기여
+
+1. 이슈를 생성하거나 기존 이슈를 확인
+2. 새로운 브랜치 생성: `git checkout -b feature/기능명`
+3. 코드 작성 및 테스트
+4. 커밋 메시지 규칙에 따라 커밋
+5. PR 생성 및 리뷰 요청
