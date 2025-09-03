@@ -6,6 +6,7 @@ export interface ButtonProps {
   variant?: "primary" | "secondary" | "outline";
   size?: "sm" | "md" | "lg";
   disabled?: boolean;
+  fullWidth?: boolean;
   onClick?: () => void;
   className?: string;
   type?: "button" | "submit" | "reset";
@@ -16,12 +17,20 @@ export const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   size = "md",
   disabled = false,
+  fullWidth = false,
   onClick,
   className = "",
   type = "button",
 }) => {
-  const buttonClasses =
-    `tooliv-button tooliv-button--${variant} tooliv-button--${size} ${className}`.trim();
+  const buttonClasses = [
+    "tooliv-button",
+    `tooliv-button--${variant}`,
+    `tooliv-button--${size}`,
+    fullWidth && "tooliv-button--full-width",
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <button
