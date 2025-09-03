@@ -1,0 +1,143 @@
+.typography {
+  margin: 0;
+  line-height: 1.5;
+  font-family: var(--font-family-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+
+  // Variant별 기본 스타일
+  &--h1, &--h2, &--h3, &--h4, &--h5, &--h6 {
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md, 1rem);
+  }
+
+  &--body {
+    line-height: 1.6;
+  }
+
+  &--caption {
+    line-height: 1.4;
+  }
+
+  &--label {
+    line-height: 1.4;
+    cursor: pointer;
+  }
+
+  // Size별 폰트 크기
+  &--xs {
+    font-size: var(--font-size-xs, 0.75rem);
+  }
+
+  &--sm {
+    font-size: var(--font-size-sm, 0.875rem);
+  }
+
+  &--base {
+    font-size: var(--font-size-base, 1rem);
+  }
+
+  &--lg {
+    font-size: var(--font-size-lg, 1.125rem);
+  }
+
+  &--xl {
+    font-size: var(--font-size-xl, 1.25rem);
+  }
+
+  &--2xl {
+    font-size: var(--font-size-2xl, 1.5rem);
+  }
+
+  &--3xl {
+    font-size: var(--font-size-3xl, 1.875rem);
+  }
+
+  &--4xl {
+    font-size: var(--font-size-4xl, 2.25rem);
+  }
+
+  // Weight별 폰트 굵기
+  &--normal {
+    font-weight: var(--font-weight-normal, 400);
+  }
+
+  &--medium {
+    font-weight: var(--font-weight-medium, 500);
+  }
+
+  &--semibold {
+    font-weight: var(--font-weight-semibold, 600);
+  }
+
+  &--bold {
+    font-weight: var(--font-weight-bold, 700);
+  }
+
+  // Color별 텍스트 색상
+  &--primary {
+    color: var(--theme-color-text-primary, #1a1a1a);
+  }
+
+  &--secondary {
+    color: var(--theme-color-text-secondary, #4a4a4a);
+  }
+
+  &--tertiary {
+    color: var(--theme-color-text-tertiary, #6b7280);
+  }
+
+  &--disabled {
+    color: var(--theme-color-text-disabled, #9ca3af);
+  }
+
+  &--inverse {
+    color: var(--theme-color-text-inverse, #ffffff);
+  }
+
+  &--success {
+    color: var(--theme-color-status-success, #10b981);
+  }
+
+  &--warning {
+    color: var(--theme-color-status-warning, #f59e0b);
+  }
+
+  &--error {
+    color: var(--theme-color-status-error, #ef4444);
+  }
+
+  &--info {
+    color: var(--theme-color-status-info, #3b82f6);
+  }
+
+  // Align별 텍스트 정렬
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--justify {
+    text-align: justify;
+  }
+
+  // 다크모드 대응
+  .dark & {
+    &--primary {
+      color: var(--theme-color-text-primary, #ffffff);
+    }
+
+    &--secondary {
+      color: var(--theme-color-text-secondary, #e5e7eb);
+    }
+
+    &--tertiary {
+      color: var(--theme-color-text-tertiary, #d1d5db);
+    }
+  }
+}
