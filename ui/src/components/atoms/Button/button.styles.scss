@@ -67,4 +67,9 @@
     padding: var(--spacing-md) var(--spacing-lg);
     font-size: var(--font-size-lg);
   }
+  
+  // Full width option
+  &--full-width {
+    width: 100%;
+  }
 }
